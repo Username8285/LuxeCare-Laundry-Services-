@@ -1,0 +1,3 @@
+import SEO from '../components/SEO';
+import { site } from '../data/fallbackContent';
+export default function About(){return <><SEO title="About" /><section className="mx-auto max-w-4xl px-4 py-16"><h1 className="text-5xl font-black text-navy">About LuxeCare</h1><p className="mt-6 text-lg text-slate-700">{site.businessName} is a Lagos-based laundry and garment care business focused on dependable pickup, careful cleaning, and a premium but approachable customer experience.</p><div className="mt-10 grid gap-5 md:grid-cols-3">{['Quality care','Clear communication','Convenience'].map(v=><div key={v} className="rounded-3xl bg-skysoft p-6 font-bold text-navy">{v}</div>)}</div></section></>}

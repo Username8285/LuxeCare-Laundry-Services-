@@ -1,0 +1,1 @@
+export default { content: ['./index.html', './src/**/*.{js,jsx}'], theme: { extend: { colors: { navy: '#0b1f3a', aqua: '#78e6e8', teal: '#14b8a6', skysoft: '#e8fbff', sunshine: '#f9d86e' } } }, plugins: [] };

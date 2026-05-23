@@ -1,0 +1,9 @@
+import SEO from '../components/SEO';
+import WhatsAppButton from '../components/WhatsAppButton';
+import ServiceCard from '../components/ServiceCard';
+import PriceCard from '../components/PriceCard';
+import { site, services, prices, faqs } from '../data/fallbackContent';
+
+export default function Home() {
+  return <><SEO title="Laundry and Garment Care in Lagos" /><section className="bg-gradient-to-br from-skysoft via-white to-aqua/30 px-4 py-20"><div className="mx-auto max-w-6xl"><p className="font-bold text-teal">Laundry service in Lagos</p><h1 className="mt-3 max-w-3xl text-5xl font-black tracking-tight text-navy md:text-7xl">{site.tagline}</h1><p className="mt-5 max-w-2xl text-lg text-slate-700">Premium, friendly laundry care with WhatsApp booking, pickup requests, and pay on delivery.</p><div className="mt-8 flex flex-wrap gap-4"><WhatsAppButton /><a href="/pricing" className="rounded-full border border-navy px-6 py-3 font-semibold text-navy">View Pricing</a></div></div></section><section className="mx-auto max-w-6xl px-4 py-16"><h2 className="text-3xl font-black text-navy">Services</h2><div className="mt-8 grid gap-5 md:grid-cols-3">{services.slice(0,5).map((s) => <ServiceCard key={s.title} {...s} />)}</div></section><section className="bg-skysoft px-4 py-16"><div className="mx-auto max-w-6xl"><h2 className="text-3xl font-black text-navy">Clear launch pricing</h2><div className="mt-8 grid gap-4 md:grid-cols-2">{prices.slice(0,4).map((p) => <PriceCard key={p.item} {...p} />)}</div></div></section><section className="mx-auto max-w-6xl px-4 py-16"><h2 className="text-3xl font-black text-navy">FAQ</h2><div className="mt-6 grid gap-4 md:grid-cols-2">{faqs.slice(0,4).map((f) => <article key={f.q} className="rounded-2xl bg-white p-5 shadow-sm"><h3 className="font-bold text-navy">{f.q}</h3><p className="mt-2 text-slate-600">{f.a}</p></article>)}</div></section></>;
+}
